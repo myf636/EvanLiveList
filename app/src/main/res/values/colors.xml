@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#00a9eb</color>
+    <color name="colorPrimaryDark">#00a9eb</color>
+    <color name="colorAccent">#00a9eb</color>
+    <color name="colorActivityBkg">#ffffff</color>
+    <color name="tab_text">#ffffff</color>
+    <color name="tab_selected">#e4ee4b</color>
+    <color name="app_color">#00a9eb</color>
+</resources>
