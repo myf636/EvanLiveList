@@ -5,7 +5,7 @@ package com.EvanMao.LiveList.InComeActivity;
  */
 public interface IInComeView {
 
-    void InitView();
+
 
 
 }

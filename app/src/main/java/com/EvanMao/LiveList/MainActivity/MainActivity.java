@@ -12,11 +12,9 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.FrameLayout;
-import android.widget.Toast;
 
-import com.EvanMao.LiveList.fragment.InCome_Fragment;
+import com.EvanMao.LiveList.InComeActivity.InCome_Fragment;
 import com.EvanMao.LiveList.fragment.MemberGroup_Fragment;
 import com.EvanMao.LiveList.fragment.Pandect_Fragment;
 import com.EvanMao.LiveList.fragment.TimeManager_Fragment;
@@ -109,27 +107,27 @@ public class MainActivity extends AutoLayoutActivity
 
         // Handle navigation view item clicks here.
         int id = item.getItemId();
-
+        HideView();
         if (id == R.id.nav_camera) {
-            HideView();
+
             if (pandect_fragment == null)
                 pandect_fragment = Pandect_Fragment.newInstance(null, null);
             Turn2NextView(pandect_fragment);
             toolbar.setTitle(getString(R.string.app_name));
         } else if (id == R.id.nav_gallery) {
-            HideView();
+
             if (inCome_fragment == null)
                 inCome_fragment = InCome_Fragment.newInstance(null, null);
             Turn2NextView(inCome_fragment);
             toolbar.setTitle(getString(R.string.left_income));
         } else if (id == R.id.nav_slideshow) {
-            HideView();
+
             if (timeManager_fragment == null)
                 timeManager_fragment = TimeManager_Fragment.newInstance(null, null);
             Turn2NextView(timeManager_fragment);
             toolbar.setTitle(getString(R.string.left_time));
         } else if (id == R.id.nav_manage) {
-            HideView();
+
             if (memberGroup_fragment == null)
                 memberGroup_fragment = MemberGroup_Fragment.newInstance(null, null);
             Turn2NextView(memberGroup_fragment);

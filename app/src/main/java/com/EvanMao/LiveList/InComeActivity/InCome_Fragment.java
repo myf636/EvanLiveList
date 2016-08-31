@@ -1,15 +1,15 @@
-package com.EvanMao.LiveList.fragment;
+package com.EvanMao.LiveList.InComeActivity;
 
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.SparseArray;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.EvanMao.LiveList.R;
+import com.EvanMao.LiveList.fragment.IMainFragmentView;
 import com.EvanMao.Tool.UIFragmentControl;
 
 import java.util.ArrayList;
@@ -18,8 +18,9 @@ import java.util.ArrayList;
  * A simple {@link Fragment} subclass.
  * Use the {@link InCome_Fragment#newInstance} factory method to
  * create an instance of this fragment.
+ * 收支情况
  */
-public class InCome_Fragment extends UIFragmentControl implements IMainFragmentView{
+public class InCome_Fragment extends UIFragmentControl implements IInComeView {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -68,13 +69,5 @@ public class InCome_Fragment extends UIFragmentControl implements IMainFragmentV
         return view;
     }
 
-    @Override
-    public void ShowMainView(ArrayList<UIFragmentControl> sparseArray) {
 
-    }
-
-    @Override
-    public void Turn2Next(Intent it) {
-
-    }
 }
