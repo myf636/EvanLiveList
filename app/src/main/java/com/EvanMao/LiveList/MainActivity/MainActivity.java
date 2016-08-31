@@ -54,11 +54,10 @@ public class MainActivity extends AutoLayoutActivity
         toggle.syncState();
 
         fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v) {
-                return false;
-            }
+        fab.setOnLongClickListener(v -> {
+            Snackbar.make(v, "Replace with your own action", Snackbar.LENGTH_LONG)
+                    .setAction("Action", null).show();
+            return false;
         });
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
