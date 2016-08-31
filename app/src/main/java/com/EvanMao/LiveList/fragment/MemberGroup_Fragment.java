@@ -12,6 +12,8 @@ import android.view.ViewGroup;
 import com.EvanMao.LiveList.R;
 import com.EvanMao.Tool.UIFragmentControl;
 
+import java.util.ArrayList;
+
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link MemberGroup_Fragment#newInstance} factory method to
@@ -68,7 +70,7 @@ public class MemberGroup_Fragment extends UIFragmentControl implements IMainFrag
     }
 
     @Override
-    public void ShowMainView(SparseArray<UIFragmentControl> sparseArray) {
+    public void ShowMainView(ArrayList<UIFragmentControl> sparseArray) {
         
     }
 

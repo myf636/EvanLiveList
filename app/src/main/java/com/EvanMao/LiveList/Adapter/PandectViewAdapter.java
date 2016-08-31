@@ -17,14 +17,16 @@ import com.EvanMao.Tool.UIFragmentControl;
 import com.zhy.autolayout.AutoRelativeLayout;
 import com.zhy.autolayout.utils.AutoUtils;
 
+import java.util.ArrayList;
+
 /**
  * Created by Administrator on 2016/1/15.
  */
 public class PandectViewAdapter extends RecyclerView.Adapter<PandectViewAdapter.ViewHolder> {
-    public SparseArray<UIFragmentControl> sparseArray;
+    public ArrayList<UIFragmentControl> sparseArray;
     private MainActivity context;
 
-    public PandectViewAdapter(SparseArray<UIFragmentControl> sparseArray, MainActivity mainActivity) {
+    public PandectViewAdapter(ArrayList<UIFragmentControl> sparseArray, MainActivity mainActivity) {
         this.sparseArray = sparseArray;
         context = mainActivity;
     }

@@ -8,7 +8,6 @@ import org.litepal.crud.DataSupport;
 public class Sql_MainCardList extends DataSupport {
 
     private String card_name;
-    private int card_index;
     private int card_type;
 
     public int getCard_type() {
@@ -17,15 +16,6 @@ public class Sql_MainCardList extends DataSupport {
 
     public void setCard_type(int card_type) {
         this.card_type = card_type;
-    }
-
-
-    public int getCard_index() {
-        return card_index;
-    }
-
-    public void setCard_index(int card_index) {
-        this.card_index = card_index;
     }
 
     public String getCard_name() {

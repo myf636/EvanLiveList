@@ -16,6 +16,8 @@ import com.EvanMao.LiveList.MainActivity.MainActivity;
 import com.EvanMao.LiveList.R;
 import com.EvanMao.Tool.UIFragmentControl;
 
+import java.util.ArrayList;
+
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link Pandect_Fragment#newInstance} factory method to
@@ -82,7 +84,7 @@ public class Pandect_Fragment extends UIFragmentControl implements IMainFragment
     }
 
     @Override
-    public void ShowMainView(SparseArray<UIFragmentControl> sparseArray) {
+    public void ShowMainView(ArrayList<UIFragmentControl> sparseArray) {
         pandectViewAdapter.sparseArray = sparseArray;
         pandectViewAdapter.notifyDataSetChanged();
 

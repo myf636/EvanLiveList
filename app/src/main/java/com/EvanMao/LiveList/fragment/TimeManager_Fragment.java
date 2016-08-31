@@ -21,6 +21,8 @@ import com.EvanMao.LiveList.Time_Manager_Fragment.Record_Fragment;
 import com.EvanMao.LiveList.Time_Manager_Fragment.Remind_Fragment;
 import com.EvanMao.Tool.UIFragmentControl;
 
+import java.util.ArrayList;
+
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link TimeManager_Fragment#newInstance} factory method to
@@ -83,14 +85,12 @@ public class TimeManager_Fragment extends UIFragmentControl implements IMainFrag
         timeManagerVpContainer.setOffscreenPageLimit(0);
         timeManagerVpContainer.setAdapter(bannerPagerAdapter);
         timeManagerBtTab.setupWithViewPager(timeManagerVpContainer);
-        FloatingActionButton fab = (FloatingActionButton) view.findViewById(R.id.fab);
-        fab.setOnClickListener(v -> Toast.makeText(this.getActivity(), "11", Toast.LENGTH_SHORT)
-                .show());
+
         return view;
     }
 
     @Override
-    public void ShowMainView(SparseArray<UIFragmentControl> sparseArray) {
+    public void ShowMainView(ArrayList<UIFragmentControl> sparseArray) {
 
     }
 

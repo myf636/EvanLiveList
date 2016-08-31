@@ -1,6 +1,8 @@
 package com.EvanMao.LiveList.MainActivity;
 
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.design.widget.NavigationView;
@@ -10,7 +12,9 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.FrameLayout;
+import android.widget.Toast;
 
 import com.EvanMao.LiveList.fragment.InCome_Fragment;
 import com.EvanMao.LiveList.fragment.MemberGroup_Fragment;
@@ -30,6 +34,7 @@ public class MainActivity extends AutoLayoutActivity
     private MemberGroup_Fragment memberGroup_fragment;
     private TimeManager_Fragment timeManager_fragment;
     private Toolbar toolbar;
+    private FloatingActionButton fab;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +52,14 @@ public class MainActivity extends AutoLayoutActivity
                 .navigation_drawer_close);
         drawer.setDrawerListener(toggle);
         toggle.syncState();
+
+        fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                return false;
+            }
+        });
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);

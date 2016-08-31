@@ -20,8 +20,8 @@ import java.util.List;
  */
 public class MainModel implements IMainModel {
     @Override
-    public SparseArray<UIFragmentControl> getDefaltMainViewInfo() {
-        SparseArray<UIFragmentControl> sparseArray = new SparseArray<>();
+    public ArrayList<UIFragmentControl> getDefaltMainViewInfo() {
+        ArrayList<UIFragmentControl> sparseArray = new ArrayList<>();
         List<Sql_MainCardList> lists;
         if (DataSupport.count(Sql_MainCardList.class) > 0) {
             //大于0，说明存储过
@@ -32,7 +32,6 @@ public class MainModel implements IMainModel {
             for (int i = 0; i < defaltArray.length; i++) {
                 Sql_MainCardList sql_mainCardList_1 = new Sql_MainCardList();
                 sql_mainCardList_1.setCard_name(defaltArray[i]);
-                sql_mainCardList_1.setCard_index(i);
                 sql_mainCardList_1.setCard_type(i);
                 lists.add(i, sql_mainCardList_1);
             }
@@ -42,15 +41,15 @@ public class MainModel implements IMainModel {
             switch (lists.get(i).getCard_type()) {
                 case 0:
                     //收支卡
-                    sparseArray.put(lists.get(i).getCard_index(), InComeCard.newInstance(null, null));
+                    sparseArray.add( InComeCard.newInstance(null, null));
                     break;
                 case 1:
                     //时间卡
-                    sparseArray.put(lists.get(i).getCard_index(), TimeManagerCard.newInstance(null, null));
+                    sparseArray.add( TimeManagerCard.newInstance(null, null));
                     break;
                 case 2:
                     //成员卡
-                    sparseArray.put(lists.get(i).getCard_index(), MemberCard.newInstance(null, null));
+                    sparseArray.add( MemberCard.newInstance(null, null));
                     break;
                 default:
                     break;

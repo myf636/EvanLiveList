@@ -14,6 +14,7 @@ import com.EvanMao.Tool.UIFragmentControl;
  * A simple {@link Fragment} subclass.
  * Use the {@link TimeManagerCard#newInstance} factory method to
  * create an instance of this fragment.
+ * 时间管理
  */
 public class TimeManagerCard extends UIFragmentControl {
     // TODO: Rename parameter arguments, choose names that match

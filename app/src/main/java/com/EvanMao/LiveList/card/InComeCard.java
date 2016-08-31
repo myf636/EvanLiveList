@@ -14,6 +14,7 @@ import com.EvanMao.Tool.UIFragmentControl;
  * A simple {@link Fragment} subclass.
  * Use the {@link InComeCard#newInstance} factory method to
  * create an instance of this fragment.
+ * 收支
  */
 public class InComeCard extends UIFragmentControl {
     // TODO: Rename parameter arguments, choose names that match

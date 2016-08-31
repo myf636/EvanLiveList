@@ -14,7 +14,9 @@ import com.EvanMao.Tool.UIFragmentControl;
  * A simple {@link Fragment} subclass.
  * Use the {@link Credit_Card#newInstance} factory method to
  * create an instance of this fragment.
+ * 信用卡还款提醒
  */
+
 public class Credit_Card extends UIFragmentControl {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER

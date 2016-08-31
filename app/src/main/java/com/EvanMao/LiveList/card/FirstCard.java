@@ -1,10 +1,8 @@
-package com.EvanMao.LiveList.fragment;
+package com.EvanMao.LiveList.card;
 
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.SparseArray;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,14 +10,13 @@ import android.view.ViewGroup;
 import com.EvanMao.LiveList.R;
 import com.EvanMao.Tool.UIFragmentControl;
 
-import java.util.ArrayList;
-
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link InCome_Fragment#newInstance} factory method to
+ * Use the {@link FirstCard#newInstance} factory method to
  * create an instance of this fragment.
+ * 第一次使用时的指导
  */
-public class InCome_Fragment extends UIFragmentControl implements IMainFragmentView{
+public class FirstCard extends UIFragmentControl {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -30,7 +27,7 @@ public class InCome_Fragment extends UIFragmentControl implements IMainFragmentV
     private String mParam2;
 
 
-    public InCome_Fragment() {
+    public FirstCard() {
         // Required empty public constructor
     }
 
@@ -40,11 +37,11 @@ public class InCome_Fragment extends UIFragmentControl implements IMainFragmentV
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment InCome_Fragment.
+     * @return A new instance of fragment FirstCard.
      */
     // TODO: Rename and change types and number of parameters
-    public static InCome_Fragment newInstance(String param1, String param2) {
-        InCome_Fragment fragment = new InCome_Fragment();
+    public static FirstCard newInstance(String param1, String param2) {
+        FirstCard fragment = new FirstCard();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -64,17 +61,8 @@ public class InCome_Fragment extends UIFragmentControl implements IMainFragmentV
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view=inflater.inflate(R.layout.fragment_in_come_, container, false);
+        View view = inflater.inflate(R.layout.fragment_first_card, container, false);
         return view;
     }
 
-    @Override
-    public void ShowMainView(ArrayList<UIFragmentControl> sparseArray) {
-
-    }
-
-    @Override
-    public void Turn2Next(Intent it) {
-
-    }
 }
