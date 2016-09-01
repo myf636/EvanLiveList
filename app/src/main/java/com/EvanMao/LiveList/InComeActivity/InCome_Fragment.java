@@ -4,15 +4,16 @@ package com.EvanMao.LiveList.InComeActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 import com.EvanMao.LiveList.R;
-import com.EvanMao.LiveList.fragment.IMainFragmentView;
 import com.EvanMao.Tool.UIFragmentControl;
-
-import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -21,6 +22,17 @@ import java.util.ArrayList;
  * 收支情况
  */
 public class InCome_Fragment extends UIFragmentControl implements IInComeView {
+
+
+    private LinearLayout incomeContainer;
+    private RecyclerView incomeC1List;
+    private ImageView incomeC1Ifempty;
+    private Button incomeC1More;
+    private RecyclerView incomeC2List;
+    private ImageView incomeC2Ifempty;
+    private Button incomeC2More;
+    private RecyclerView incomeC3List;
+    private ImageView incomeC3Ifempty;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -65,9 +77,32 @@ public class InCome_Fragment extends UIFragmentControl implements IInComeView {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view=inflater.inflate(R.layout.fragment_in_come_, container, false);
+        View view = inflater.inflate(R.layout.fragment_in_come_, container, false);
+        instanceView(view);
+
         return view;
     }
 
+    private void instanceView(View view) {
+        incomeContainer = (LinearLayout) view.findViewById(R.id.income_container);
+        incomeC1List = (RecyclerView) view.findViewById(R.id.income_c1_list);
+        incomeC1Ifempty = (ImageView) view.findViewById(R.id.income_c1_ifempty);
+        incomeC1More = (Button) view.findViewById(R.id.income_c1_more);
+        incomeC2List = (RecyclerView) view.findViewById(R.id.income_c2_list);
+        incomeC2Ifempty = (ImageView) view.findViewById(R.id.income_c2_ifempty);
+        incomeC2More = (Button) view.findViewById(R.id.income_c2_more);
+        incomeC3List = (RecyclerView) view.findViewById(R.id.income_c3_list);
+        incomeC3Ifempty = (ImageView) view.findViewById(R.id.income_c3_ifempty);
+    }
 
+
+    @Override
+    public void LoadInfo() {
+
+    }
+
+    @Override
+    public void Jump2NextActivity(Intent it) {
+        startActivity(it);
+    }
 }
