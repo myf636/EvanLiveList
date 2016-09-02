@@ -33,4 +33,8 @@
     <string name="first_tx">欢迎使用埃文生活，点击下方的小麦克，你可以用说话的方式控制小艾的一切</string>
     <string name="income_more">查看更多</string>
     <string name="income_card_manager">信用卡管理</string>
+    <string name="enter_action">这里填写您的活动</string>
+    <string name="enter_money">这里填写金额（最多精确到分）</string>
+    <string name="topay">支出</string>
+    <string name="income">收入</string>
 </resources>

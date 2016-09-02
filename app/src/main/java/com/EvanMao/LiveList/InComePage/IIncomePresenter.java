@@ -1,4 +1,4 @@
-package com.EvanMao.LiveList.InComeActivity;
+package com.EvanMao.LiveList.InComePage;
 
 /**
  * Created by Meict on 2016/9/1.

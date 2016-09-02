@@ -1,4 +1,4 @@
-package com.EvanMao.LiveList.InComeActivity;
+package com.EvanMao.LiveList.InComePage;
 
 import android.util.SparseArray;
 

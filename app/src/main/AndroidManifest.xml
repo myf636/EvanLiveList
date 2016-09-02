@@ -27,6 +27,9 @@
             android:name="design_height"
             android:value="1920" />
 
+        <activity
+            android:name=".InComeActivity.IncomeListActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>
